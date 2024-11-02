@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiCalc - 시간복잡도 계산기</title>
+  <link rel="stylesheet" href="../css/timecomplexity.css">
+</head>
+<body>
+<header>
+  <h1>MultiCalc - 시간복잡도 계산기</h1>
+</header>
+<main>
+  <h2>필요한 계산기를 선택하세요</h2>
+  <div class="calculator-options">
+    <button onclick="location.href='../html/advancedcalculator.html'">공학용 계산기</button>
+    <button onclick="location.href='../html/binarycalculator.html'">이진법 계산기</button>
+    <button onclick="location.href='../html/electric.html'">전기 요금 계산기</button>
+  </div>
+
+  <section class="calculator-container">
+    <h2>빅오 표기법 계산기</h2>
+    <div class="big-o-layout">
+      <!-- 코드 입력 영역 -->
+      <div class="input-section">
+        <label for="codeInput">코드 입력:</label>
+        <textarea id="codeInput" placeholder="JavaScript 코드를 입력하세요..."></textarea>
+      </div>
+
+      <!-- for문 질문과 입력 필드 -->
+      <div class="for-loop-container">
+        <label for="loopCount">루프의 깊이 (단일 = 1, 이중 = 2, 삼중 = 3):</label>
+        <input type="number" id="loopCount" placeholder="예: 단일이면 1, 이중이면 2, 삼중이면 3" min="0">
+
+
+        <label for="hasRecursion">재귀가 있습니까?</label>
+        <input type="checkbox" id="hasRecursion">
+
+        <label for="hasBinarySearch">이진 탐색이 있습니까?</label>
+        <input type="checkbox" id="hasBinarySearch">
+      </div>
+
+      <!-- 결과 출력 및 버튼 -->
+      <div class="result-container">
+        예상 시간 복잡도: <span id="bigOResult">N/A</span>
+        <button onclick="analyzeBigO()">빅오 계산</button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>만든이: 기능 구현 1팀</p>
+</footer>
+<script src="../js/timecomplexity.js"></script>
+</body>
+</html>

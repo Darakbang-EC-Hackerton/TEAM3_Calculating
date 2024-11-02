@@ -1,0 +1,145 @@
+/* body 스타일 설정 */
+body {
+  background-color: #f0f4fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 헤더 스타일 */
+header {
+  width: 100%;
+  background-color: #28527a;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 메인 콘텐츠 정렬 */
+main {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+/* 계산기 선택 버튼 가로 정렬 */
+.calculator-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #357ABD;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 빅오 표기법 계산기 스타일 */
+.calculator-container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 4열 레이아웃 설정 */
+.big-o-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  align-items: start;
+}
+
+/* 코드 입력 영역 스타일 */
+.input-section {
+  grid-column: 1 / 2;
+}
+
+#codeInput {
+  width: 100%;
+  height: 250px;
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+/* for문 깊이 입력 필드 스타일 */
+.loop-depth-section {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loop-depth-section label {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* 체크박스 필드 스타일 */
+.checkbox-section {
+  grid-column: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 결과 영역 스타일 및 버튼 배치 */
+.result-container {
+  font-size: 1.2em;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  gap: 15px;
+  grid-column: 4 / 5;
+}
+
+/* footer 스타일 */
+footer {
+  background-color: #28527a;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
