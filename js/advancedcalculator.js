@@ -86,8 +86,3 @@ function calculateTrigonometry(func) {
   document.getElementById('output').classList.remove('error');
   updateDisplay();
 }
-
-// HTML 버튼에서 삼각함수 호출 예시
-// sin 버튼 클릭 시: calculateTrigonometry('sin')
-// cos 버튼 클릭 시: calculateTrigonometry('cos')
-// tan 버튼 클릭 시: calculateTrigonometry('tan')
